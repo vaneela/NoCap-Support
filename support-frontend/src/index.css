@@ -1,0 +1,35 @@
+@config "../tailwind.config.js";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-white font-sans text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100;
+}
+
+h1,
+h2 {
+  font-family: 'Space Grotesk', Inter, ui-sans-serif, sans-serif;
+  letter-spacing: -0.025em;
+}
+
+::selection {
+  background-color: #FFBAF1;
+  color: #6E0C56;
+}
+
+@layer components {
+  .neon-text {
+    background-image: linear-gradient(135deg, #F91FC6 0%, #A855F7 50%, #22E8FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
